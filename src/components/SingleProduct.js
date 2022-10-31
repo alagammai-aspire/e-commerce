@@ -1,9 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Cart } from "../Context";
 
 const SingleProduct = ({ prod }) => {
-  const { cart, setCart } = useContext(Cart);
-  const [qty, setQty] = useState(1);
+  const { cart, setCart, qty, setQty } = useContext(Cart);
 
   return (
     <li key={prod.id} className="col-md-3">
@@ -28,7 +27,6 @@ const SingleProduct = ({ prod }) => {
               <button
                 onClick={() => {
                   if (qty >= 1) setQty(qty - 1);
-                  //   setCart([...cart, (prod.price = prod.price * qty)]);
                 }}
               >
                 -
@@ -41,9 +39,6 @@ const SingleProduct = ({ prod }) => {
               <button
                 onClick={() => {
                   if (qty <= 9) setQty(qty + 1);
-                  //   setCart(
-                  //     cart.map((elm) => [...elm, (elm.price = elm.price * qty)])
-                  //   );
                 }}
               >
                 +

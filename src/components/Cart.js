@@ -4,18 +4,11 @@ import { Cart } from "../Context";
 import SingleProduct from "./SingleProduct";
 
 const Cartpage = () => {
-  const { cart } = useContext(Cart);
+  const { cart, qty } = useContext(Cart);
 
-  const [total, setTotal] = useState();
+  // const [total, setTotal] = useState();
 
   console.log("cart has", cart);
-  useEffect(() => {
-    setTotal(
-      cart.reduce((prev, curr) => {
-        return prev + Number(curr.price);
-      }, 0)
-    );
-  }, [cart]);
 
   console.log("cart value is", cart);
 
@@ -36,7 +29,11 @@ const Cartpage = () => {
               className="text-right"
               style={{ textAlign: "right", marginTop: "20px", color: "red" }}
             >
-              <b>Total Price is:</b> ${total}
+              {/* <b>Total Price is:</b> ${total} */}
+              <b>
+                Total amountL: $
+                {cart.reduce((total, item) => total + item.price * qty, 0)}
+              </b>
             </h3>
           </div>
         )}
