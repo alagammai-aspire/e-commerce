@@ -11,7 +11,9 @@ const SingleProduct = ({ prod }) => {
         <div className="image">
           <img src={prod.image} alt={prod.title} />
         </div>
-        <p className="price">${qty > 0 ? prod.price * qty : prod.price}</p>
+        <p className="price">
+          ${qty > 0 ? Math.trunc(prod.price * qty) : prod.price}
+        </p>
 
         {cart.includes(prod) ? (
           <>

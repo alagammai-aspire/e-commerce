@@ -32,7 +32,10 @@ const Cartpage = () => {
               {/* <b>Total Price is:</b> ${total} */}
               <b>
                 Total amountL: $
-                {cart.reduce((total, item) => total + item.price * qty, 0)}
+                {cart.reduce(
+                  (total, item) => Math.trunc(total + item.price * qty),
+                  0
+                )}
               </b>
             </h3>
           </div>
