@@ -24,18 +24,18 @@ const App = () => {
             exact
             path="/home"
             element={
-              <PrivateRoutes>
-                <Home />
-              </PrivateRoutes>
+              // <PrivateRoutes>
+              <Home />
+              // </PrivateRoutes>
             }
           />
           <Route
             exact
             path="/cart"
             element={
-              <PrivateRoutes>
-                <Cart />
-              </PrivateRoutes>
+              // <PrivateRoutes>
+              <Cart />
+              // {/* </PrivateRoutes> */}
             }
           />
         </Routes>

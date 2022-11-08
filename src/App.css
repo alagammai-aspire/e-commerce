@@ -5,13 +5,26 @@ body{
 .header{
 display: flex;
 align-items: center;
-justify-content: space-between;
-background: peru;
+justify-content: center;
+background: #2874f0;
 margin: 0px;
 padding: 10px;
+flex: 0 0 93%;
 }
 .header li{
 list-style: none;
+}
+.h-right{
+  flex: 0 0 7%;
+  text-align: -webkit-right;
+  padding-right: 50px;
+  background: #cd3fac;
+  padding: 10px;
+  color: #fff;
+}
+.h-right a,.h-right a:hover{
+  color: #fff;
+  text-decoration: none;
 }
 .header li a{
   color: #fff;
@@ -60,7 +73,7 @@ list-style: none;
 }
 .prod-item{
   padding: 20px;
-  border:1px solid #222;
+  border:1px dashed;
   text-align: center;
 }
 .price{
@@ -158,4 +171,23 @@ input{
 .inc-dec-section input{
   width: 100px;
   margin: 20px 0px;
+}
+.search {
+  width: 350px;
+  height: 53px;
+  border: none;
+  box-shadow: 0px 0px 15px -3px #3f86cd;
+}
+.searchbtn{
+  background: #330867;
+  color: #fff;
+  border: none;
+  height: 40px;
+  padding: 0px 20px;
+}
+html, body{
+  overflow-x: hidden;
+}
+.header a{
+  text-decoration: none;
 }

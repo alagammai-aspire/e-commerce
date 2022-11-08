@@ -16,22 +16,25 @@ const Header = () => {
   };
   return (
     <>
-      <ul className="header">
-        <li>
-          <Link to="/home">Home</Link>
-        </li>
-        <li>
-          <Link to="/cart">
-            Cart <span className="bgred">{cart.length}</span>
-          </Link>
-        </li>
-        <li className="pull-right text-right">
+      <div className="d-flex">
+        <ul className="header">
+          <li>
+            <Link to="/home">Home</Link>
+          </li>
+          <li>
+            <Link to="/cart">
+              Cart<span className="bgred">{cart.length}</span>
+            </Link>
+          </li>
+        </ul>
+
+        <div className="pull-right text-right h-right">
           <Link to="/login">
-            {" "}
+            Logout&nbsp;
             <i className="fa fa-power-off" style={power} aria-hidden="true"></i>
           </Link>
-        </li>
-      </ul>
+        </div>
+      </div>
     </>
   );
 };

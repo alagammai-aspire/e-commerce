@@ -11,6 +11,8 @@ const Context = ({ children }) => {
 
   const [isLogin, setIsLogin] = useState(false);
 
+  const [loading, setLoading] = useState(true);
+
   let getItems = JSON.parse(localStorage.getItem("Items"));
   return (
     <>
@@ -27,6 +29,8 @@ const Context = ({ children }) => {
           setPassword,
           setIsLogin,
           isLogin,
+          loading,
+          setLoading,
         }}
       >
         {children}
